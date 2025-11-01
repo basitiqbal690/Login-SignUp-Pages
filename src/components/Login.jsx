@@ -3,7 +3,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 
-// ✅ Validation Schema
 const schema = Yup.object({
   email: Yup.string()
     .email("Invalid email address")
@@ -14,7 +13,6 @@ const schema = Yup.object({
 });
 
 const Login = () => {
-  // ✅ useForm setup
   const {
     register,
     handleSubmit,
@@ -28,7 +26,7 @@ const Login = () => {
   });
 
   const onSubmit = (data) => {
-    console.log("✅ Form Data:", data);
+    console.log("Form Data:", data);
     alert("Form submitted successfully!");
   };
 
