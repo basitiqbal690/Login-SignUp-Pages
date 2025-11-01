@@ -3,7 +3,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 
-// ✅ Validation Schema
 const schema = Yup.object({
   fname: Yup.string().required("First name is required"),
   lname: Yup.string().required("Last name is required"),
@@ -19,7 +18,6 @@ const schema = Yup.object({
 });
 
 const SignUp = () => {
-  // ✅ useForm setup
   const {
     register,
     handleSubmit,
@@ -36,7 +34,7 @@ const SignUp = () => {
   });
 
   const onSubmit = (data) => {
-    console.log("✅ Form Data:", data);
+    console.log("Form Data:", data);
     alert("Form submitted successfully!");
   };
 
@@ -48,7 +46,6 @@ const SignUp = () => {
         </h1>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* First Name */}
           <div className="mb-4">
             <input
               type="text"
@@ -67,7 +64,6 @@ const SignUp = () => {
             )}
           </div>
 
-          {/* Last Name */}
           <div className="mb-4">
             <input
               type="text"
@@ -86,7 +82,6 @@ const SignUp = () => {
             )}
           </div>
 
-          {/* Email */}
           <div className="mb-4">
             <input
               type="email"
@@ -105,7 +100,6 @@ const SignUp = () => {
             )}
           </div>
 
-          {/* Password */}
           <div className="mb-4">
             <input
               type="password"
@@ -124,7 +118,6 @@ const SignUp = () => {
             )}
           </div>
 
-          {/* Confirm Password */}
           <div className="mb-6">
             <input
               type="password"
@@ -143,7 +136,6 @@ const SignUp = () => {
             )}
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition-transform transform hover:scale-102"
